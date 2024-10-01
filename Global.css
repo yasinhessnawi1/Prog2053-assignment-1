@@ -36,6 +36,9 @@ body{
     margin: 10px;
 
 }
+.active {
+    color: #a25f5f;
+}
 
 #header-nav {
     display: flex;
