@@ -1,6 +1,11 @@
+/*
+    This is the styling for the posts page.
+*/
 
 
-
+/*
+    This is the container for the posts.
+*/
 .post-container {
     display: flex;
     flex-direction: column;
@@ -10,6 +15,9 @@
     width: 95%; /* 5% margin on both sides */
 }
 
+/*
+    This is the title of the post.
+*/
 .post-Title {
     font-size: 24px;
     font-weight: bold;
@@ -17,6 +25,9 @@
     
 }
 
+/*
+    This is the content of the post.
+*/
 .post-content {
     font-size: 16px;
     margin-bottom: 20px;

@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="Global.css">
 </head>
 <body>
+    <!-- Header -->
 <header id="header">
     <h2 id="header-logo">Header Logo</h2>
     <nav id="header-nav">
         <a class="header-link active" href="index.html">Home</a>
         <a class="header-link" href="posts_page/posts.html">Posts</a>
-        <a class="header-link" href="#">Link 3</a>
+        <a class="header-link" href="weather_page/weather.html">Weather</a>
     </nav>
 </header>
-<div id="banner">
+
+<!-- Banner -->
+<section id="banner">
     <div id="banner-left-content">
         <h1 id="website-title">This website is awesome</h1>
         <p id="website-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, consectetur
@@ -23,9 +26,12 @@
         <button id="sign-up-button">Sign up</button>
     </div>
     <div id="banner-image"> This is a placeholder for an image</div>
-</div>
-<div id="main-content">
-    <div class="information-content">
+</section>
+
+<!-- Main Content to display some placeholder information -->
+<section id="main-content">
+     <!-- placeholder title, information and the floating rectangles -->
+    <article class="information-content">
         <h2 id="main-content-title">Some random Information</h2>
         <div class="rect-placeholder-container">
             <div id="rect-placeholder-first"></div>
@@ -43,28 +49,30 @@
                 cumque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad culpa deserunt doloremque expedit</p>
             </div>
         </div>
+    </article>
 
-    </div>
-    <div id="quote-container" >
+    <!-- Quote card with author -->
+    <article id="quote-container" >
         <div id="quote" >
             <p >This is an inspiring quote, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci aliquid architecto aut autem, beatae dolor ea eligendi eveniet modi natus nemo </p>
             <h5 id="quote-author">-Thor</h5>
         </div>
+    </article>
 
-    </div>
-
-    <div id="contact-container" >
+    <!-- contact information card-->
+    <article id="contact-container" >
         <div id="contact-info">
         <label for="contact-info-text" id="contact-info-label">Call to action! Its time!</label>
         <p id="contact-info-text" >Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </div>
         <button id="contact-info-button">Sign up</button>
-    </div>
+    </article>
 
+    <!-- Footer -->
     <footer id="footer" >
         Copyright©
     </footer>
-</div>
+</section>
 <script src="./posts_page/PostPage.js"></script>
 
 </body>

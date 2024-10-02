@@ -34,11 +34,17 @@ function displayPosts() {
     xhr.send();
 }
 
-function createPosts(data) {
-    postContainer.innerHTML = ''; // Clear existing content
-    let rowContainer = null;
-    let postCount = 0;
+/*
+    This function will create the posts and display them in the post container.
+    It will create a new row for every 3 posts.
 
+    @param {array} data - The data to display in the posts.
+*/
+function createPosts(data) {
+    let rowContainer = null; // This is the container for the posts
+    let postCount = 0; // This is the count of the posts
+
+    // Loop through the data and create the posts
     data.forEach(post => {
         if (postCount % 3 === 0) {
             // Create a new row for every 3 posts
@@ -49,10 +55,11 @@ function createPosts(data) {
             rowContainer.style.marginBottom = '20px';
             postContainer.appendChild(rowContainer);
         }
-
+        // create the post element
         const postElement = document.createElement('div');
         postElement.className = 'post';
         postElement.id = post.id;
+        // styling the post element (I could have done this with css but this is a quick solution and i wanted to try something new)
         postElement.style.width = '30%';
         postElement.style.border = '1px solid #ddd';
         postElement.style.borderRadius = '8px';
@@ -63,9 +70,20 @@ function createPosts(data) {
             <h2 style="font-size: 18px; margin-bottom: 10px;">${post.title}</h2>
             <p style="font-size: 14px;">${post.body}</p>
         `;
+        // append the post element to the row container
         rowContainer.appendChild(postElement);
-
+        // increment the post count
         postCount++;
     });
+
+    // add event listener for user reach the bottom of the page
+    const scrollListener = () => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10) {
+            displayPosts();
+            removeEventListener('scroll', scrollListener);
+        }
+    };
+    // add the event listener for the scroll listener
+    window.addEventListener('scroll', scrollListener);
 }
 
